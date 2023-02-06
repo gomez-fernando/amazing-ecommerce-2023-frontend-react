@@ -1,6 +1,9 @@
 :root {
+  --primary-color: #FFD814;
+  --primary-color-hover: #F7CA00;
   --custom-color-black: #404040;
   --custom-color-white: #ffffff;
+  --stars-color: #ffc000;
 }
 
 body {
@@ -16,6 +19,17 @@ body {
   min-height: 100vh;
 }
 
+.btn-primary {
+  background-color: var(--primary-color);
+  color: black;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color-hover);
+  color: black;
+}
+
 main{
   flex: 1;
 }
@@ -26,15 +40,19 @@ main{
   justify-content: center;
 }
 
-.product {
-  border: 1px var(--custom-color-black) solid;
-  margin: 1rem;
+.rating span {
+  color: var(--stars-color);
 }
 
-.product img {
+/* .product {
+  border: 1px var(--custom-color-black) solid;
+  margin: 1rem;
+} */
+
+/* .product img {
   width: 100%;
   max-width: 400px;
-}
+} */
 
 .product-info {
   padding: 1rem;
