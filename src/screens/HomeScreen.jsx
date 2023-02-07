@@ -1,8 +1,11 @@
+import { computeHeadingLevel } from "@testing-library/react";
 import axios from "axios";
 import { useEffect, useReducer } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 import logger from 'use-reducer-logger';
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
 import Product from "../components/Product";
 
 const reducer = (state, action) => {
@@ -46,9 +49,9 @@ const HomeScreen = () => {
       <h1>Featured Products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading...</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger" >{error}</MessageBox>
         ) : (
           <Row>
             {products.map(product => (
