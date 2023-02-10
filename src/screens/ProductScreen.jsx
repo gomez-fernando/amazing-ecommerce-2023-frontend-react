@@ -121,7 +121,7 @@ const ProductScreen = () => {
                         </Button>
                       ) : (
                         <Button variant="disabled">
-                          Currently not available
+                          Out of Stock
                         </Button>
                       )}
                     </div>
